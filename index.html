@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бібліотечний каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <h1 class="logo">📚 Smart Library</h1>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Пошук за назвою або автором...">
+            </div>
+        </div>
+    </header>
+
+    <main class="main container">
+        
+        <section class="filters">
+            <button class="filter-btn active" data-genre="all">Всі книги</button>
+            <button class="filter-btn" data-genre="fiction">Фантастика</button>
+            <button class="filter-btn" data-genre="science">Наука</button>
+            <button class="filter-btn" data-genre="history">Історія</button>
+        </section>
+
+        <section class="catalog-grid" id="catalogGrid">
+            
+            <article class="book-card" data-genre="fiction">
+                <div class="book-img">📖</div>
+                <div class="book-info">
+                    <h3 class="book-title">Дюна</h3>
+                    <p class="book-author">Френк Герберт</p>
+                    <span class="book-genre">Фантастика</span>
+                    <button class="details-btn">Детальніше</button>
+                </div>
+            </article>
+
+            <article class="book-card" data-genre="science">
+                <div class="book-img">🔬</div>
+                <div class="book-info">
+                    <h3 class="book-title">Коротка історія часу</h3>
+                    <p class="book-author">Стівен Гокінґ</p>
+                    <span class="book-genre">Наука</span>
+                    <button class="details-btn">Детальніше</button>
+                </div>
+            </article>
+
+            <article class="book-card" data-genre="history">
+                <div class="book-img">🏛️</div>
+                <div class="book-info">
+                    <h3 class="book-title">Sapiens. Коротка історія людства</h3>
+                    <p class="book-author">Юваль Ноа Харарі</p>
+                    <span class="book-genre">Історія</span>
+                    <button class="details-btn">Детальніше</button>
+                </div>
+            </article>
+
+            <article class="book-card" data-genre="fiction">
+                <div class="book-img">🚀</div>
+                <div class="book-info">
+                    <h3 class="book-title">1984</h3>
+                    <p class="book-author">Джордж Орвелл</p>
+                    <span class="book-genre">Фантастика</span>
+                    <button class="details-btn">Детальніше</button>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Smart Library. Усі права захищені.</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="bookModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modalTitle">Назва книги</h2>
+            <p id="modalDesc">Детальна інформація про книгу, наявність у фонді та можливість бронювання.</p>
+            <button class="order-btn" id="orderActionBtn">Замовити</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
